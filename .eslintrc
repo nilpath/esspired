@@ -1,0 +1,37 @@
+{
+  "ecmaFeatures": {
+    "arrowFunctions": true,
+    "blockBindings": true,
+    "classes": true,
+    "defaultParams": true,
+    "destructuring": true,
+    "modules": true,
+    "objectLiteralComputedProperties": true,
+    "objectLiteralDuplicateProperties": true,
+    "objectLiteralShorthandMethods": true,
+    "objectLiteralShorthandProperties": true,
+    "forOf": true,
+    "restParams": true,
+    "spread": true,
+    "templateStrings": true,
+    "experimentalObjectRestSpread": true
+  },
+  "rules": {
+    "block-spacing": 2,
+    "comma-dangle": 2,
+    "comma-spacing": 2,
+    "comma-style": 2,
+    "func-names": 2,
+    "indent": [2, 2],
+    "key-spacing": [2, {"beforeColon": false, "afterColon": true, "mode": "minimum"}],
+    "no-mixed-spaces-and-tabs": 2,
+    "no-inline-comments": 2,
+    "no-unused-vars": 2,
+    "no-use-before-define": [2, "nofunc"],
+    "object-curly-spacing": [2, "always"],
+    "quotes": [2, "single"],
+    "semi": 2,
+    "semi-spacing": 2
+  },
+  "globals": {}
+}

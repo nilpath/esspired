@@ -1,0 +1,44 @@
+{
+  "name": "esspired",
+  "version": "0.0.1",
+  "description": "session storage with an expiration",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "./node_modules/.bin/babel src --presets babel-preset-es2015 -d dist",
+    "test": "./node_modules/.bin/karma start karma.config.js --single-run",
+    "prepublish": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nilpath/esspired.git"
+  },
+  "keywords": [
+    "session",
+    "storage",
+    "expiration",
+    "ttl",
+    "cache"
+  ],
+  "author": "Christoffer Ahrling",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nilpath/esspired/issues"
+  },
+  "homepage": "https://github.com/nilpath/esspired#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "babel-cli": "^6.10.1",
+    "babel-core": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "chai": "^3.5.0",
+    "eslint": "^2.12.0",
+    "karma": "^0.13.22",
+    "karma-babel-preprocessor": "^6.0.1",
+    "karma-chai": "^0.1.0",
+    "karma-commonjs": "^1.0.0",
+    "karma-mocha": "^1.0.1",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "mocha": "^2.5.3",
+    "phantomjs-prebuilt": "^2.1.7"
+  }
+}
