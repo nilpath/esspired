@@ -20,7 +20,11 @@
     "ttl",
     "cache"
   ],
-  "author": "Christoffer Ahrling",
+  "author": {
+    "name": "Christoffer Ahrling",
+    "email": "christoffer@nilpath.se",
+    "url": "http://nilpath.se"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nilpath/esspired/issues"
