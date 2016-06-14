@@ -4,6 +4,7 @@
   "description": "session storage with an expiration",
   "main": "./dist/index.js",
   "scripts": {
+    "prebuild": "npm test",
     "build": "./node_modules/.bin/babel src --presets babel-preset-es2015 -d dist",
     "test": "./node_modules/.bin/karma start karma.config.js --single-run",
     "prepublish": "npm run build"
