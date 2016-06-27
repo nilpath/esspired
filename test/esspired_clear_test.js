@@ -10,7 +10,7 @@ describe('Esspired #clear', function() {
     window.sessionStorage.setItem('one', 1);
     window.sessionStorage.setItem('two', 2);
     window.sessionStorage.setItem('three', 3);
-
+    
     expect(window.sessionStorage.length).to.equal(3);
     esspired.clear();
     expect(window.sessionStorage.length).to.equal(0);

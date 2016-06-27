@@ -52,6 +52,31 @@ class Esspired {
 
 }
 
-const hasSessionStorage = ("sessionStorage" in window && window.sessionStorage);
-if(!hasSessionStorage) { console.warn("sessionStorage is not available"); }
-module.exports = new Esspired();
+/* polyfill sessionStorage but it wont be persistant. */
+class StoragePolyfill {
+
+  constructor() {
+    this._data  = {};
+  }
+
+  setItem(key, data) { return this._data[key] = String(data); }
+
+	getItem(key) { return this._data.hasOwnProperty(key) ? this._data[key] : null; }
+
+  removeItem(key) { return delete this._data[key]; }
+
+  clear() { return this._data = {}; }
+
+}
+
+function hasSessionStorage() {
+  try {
+    window.sessionStorage.setItem('test', 'test');
+    window.sessionStorage.removeItem('test');
+    return true;
+  } catch (e) {
+    return false;
+  }
+}
+
+module.exports = hasSessionStorage() ? new Esspired() : new StoragePolyfill();
