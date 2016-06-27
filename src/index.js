@@ -2,8 +2,10 @@
 
 class Esspired {
 
-  constructor() {
-    this.length = window.sessionStorage.length;
+  constructor() {}
+
+  length() {
+    return window.sessionStorage.length;
   }
 
   key(n) {
@@ -15,7 +17,7 @@ class Esspired {
     try {
       const entry = JSON.parse(item);
 
-      // return entry as is if not an esspired entry.
+      /* return entry as is if not an esspired entry. */
       if( !entry.data && !entry.expire ) { return entry; }
 
       const { data, expire } = entry;
@@ -30,7 +32,7 @@ class Esspired {
       return data;
 
     } catch (e) {
-      // return item as is if not an object.
+      /* return item as is if not an object. */
       return item;
     }
   }
